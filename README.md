@@ -20,7 +20,7 @@ Actualmente, la librería lleva el control de su inventario de libros y las vent
 - **Interfaz simple:**  
   - Menú interactivo por consola.
  
-¿Cómo ejecutar y probar?
+¿Cómo Ejecutar y Probar?
 1. Instala .NET 8 SDK.
 2. Abre consola en el proyecto.
 3. Ejecuta: `dotnet run`
@@ -39,12 +39,12 @@ Bienvenido al Sistema de Gestión de Inventario Lectura Viva
 Seleccione opción: 
 
 
-## Sugerencias de mejora
+## Sugerencias de Mejora
 - Persistencia de datos en archivos o base de datos.
 - Multiusuario y autenticación.
 - Más reportes y filtros avanzados.
 
-## Estructyura de Carpetas
+## Estructura de Carpetas
 
 InventarioLibreria/
 ├── Program.cs
