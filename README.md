@@ -36,7 +36,85 @@ Bienvenido al Sistema de Gestión de Inventario Lectura Viva
 5. Registrar venta
 6. Ver reportes
 0. Salir
-Seleccione opción: 
+Seleccione opción:
+
+ ## Ejemplos de Entrada y Salida
+
+```text
+Bienvenido al Sistema de Inventario Lectura Viva
+1. Agregar libro
+2. Consultar libros
+3. Actualizar libro
+4. Eliminar libro
+5. Registrar venta
+6. Ver reportes
+0. Salir
+Seleccione opción: 1
+Título: El Quijote
+Autor: Miguel de Cervantes
+ISBN: 9788491050611
+Precio: 350
+Stock: 10
+Libro agregado exitosamente.
+
+Seleccione opción: 2
+
+Libros en inventario:
+El Quijote - Miguel de Cervantes | ISBN: 9788491050611 | Stock: 10 | Precio: $350.00
+
+Seleccione opción: 5
+Ingrese ISBN del libro vendido: 9788491050611
+Cantidad vendida: 2
+Venta registrada correctamente.
+
+Seleccione opción: 6
+
+--- Reporte de Stock ---
+El Quijote - Miguel de Cervantes | ISBN: 9788491050611 | Stock: 8 | Precio: $350.00
+
+--- Reporte de Ventas ---
+09/09/2025 12:13 | El Quijote | Cantidad: 2 | Total: $700.00
+```
+
+---
+
+## Evidencias (simulaciones de consola)
+
+```text
+1. Agregar libro
+Título: C# Avanzado
+Autor: Juan Pérez
+ISBN: 123456789
+Precio: 500
+Stock: 5
+Libro agregado exitosamente.
+
+2. Consultar libros
+C# Avanzado - Juan Pérez | ISBN: 123456789 | Stock: 5 | Precio: $500.00
+
+5. Registrar venta
+Ingrese ISBN del libro vendido: 123456789
+Cantidad vendida: 1
+Venta registrada correctamente.
+
+6. Ver reportes
+
+--- Reporte de Stock ---
+C# Avanzado - Juan Pérez | ISBN: 123456789 | Stock: 4 | Precio: $500.00
+
+--- Reporte de Ventas ---
+09/09/2025 12:15 | C# Avanzado | Cantidad: 1 | Total: $500.00
+```
+
+---
+
+## Sugerencias de mejora
+
+- Persistencia de datos en archivos o base de datos.
+- Multiusuario y autenticación.
+- Más reportes y filtros avanzados.
+
+---
 
 
 ## Sugerencias de Mejora
