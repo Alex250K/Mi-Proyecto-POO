@@ -108,14 +108,6 @@ C# Avanzado - Juan Pérez | ISBN: 123456789 | Stock: 4 | Precio: $500.00
 
 ---
 
-## Sugerencias de mejora
-
-- Persistencia de datos en archivos o base de datos.
-- Multiusuario y autenticación.
-- Más reportes y filtros avanzados.
-
----
-
 
 ## Sugerencias de Mejora
 - Persistencia de datos en archivos o base de datos.
