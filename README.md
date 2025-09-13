@@ -1,9 +1,6 @@
 # Mi-Proyecto-POO
 Gestion de Inventario Simple Para una Libreria
 
-# Mi-Proyecto-POO
-Gestion de Inventario Simple Para una Libreria
-
 ## 1. Caso de Negocio
 La librería "Lectura Viva" necesita una aplicación interna para gestionar su inventario de libros. El sistema debe permitir agregar, consultar, actualizar y eliminar libros, registrar ventas y mostrar reportes básicos de stock y ventas.
 Actualmente, la librería lleva el control de su inventario de libros y las ventas de forma manual (papel o Excel). Esto genera errores frecuentes, pérdida de información, dificultad para conocer el stock real, y falta de reportes para tomar decisiones rápidas.
