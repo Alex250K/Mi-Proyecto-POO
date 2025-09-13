@@ -31,10 +31,11 @@ namespace InventarioLibreria.Services
                 Console.WriteLine("Error: Todos los campos son obligatorios. No se ha registrado el libro.");
                 return;
             }
-
+            
             // Validación de tipos de datos
             decimal precio;
             int stock;
+            // Se usa TryParse para intentar convertir el string a un número de forma segura.
             bool precioValido = decimal.TryParse(precioInput, out precio) && precio > 0;
             bool stockValido = int.TryParse(stockInput, out stock) && stock >= 0;
 
@@ -53,9 +54,10 @@ namespace InventarioLibreria.Services
             libros.Add(libro);
             Console.WriteLine("Libro agregado exitosamente.");
         }
-
+        // Muestra la información de todos los libros en el inventario.
         public void ConsultarLibros()
         {
+            // Comprobación para evitar mostrar un mensaje de error si la lista está vacía.
             if (libros.Count == 0)
             {
                 Console.WriteLine("No hay libros en el inventario.");
@@ -63,15 +65,15 @@ namespace InventarioLibreria.Services
             }
 
             Console.WriteLine("\nLibros en inventario:");
-            foreach (var libro in libros)
+            foreach (var libro in libros)  // Itera sobre cada libro en la lista y llama a su método para mostrar la información.
                 libro.MostrarInfo();
         }
-
+        // Permite actualizar la información de un libro existente buscándolo por su ISBN.
         public void ActualizarLibro()
         {
             Console.Write("Ingrese ISBN del libro a actualizar: ");
             string? isbn = Console.ReadLine();
-            var libro = libros.FirstOrDefault(l => l.ISBN == isbn);
+            var libro = libros.FirstOrDefault(l => l.ISBN == isbn);  // Busca el primer libro que coincida con el ISBN. FirstOrDefault devuelve null si no encuentra coincidencias.
 
             if (libro == null)
             {
@@ -80,7 +82,7 @@ namespace InventarioLibreria.Services
             }
 
             Console.WriteLine("Deje vacío para no modificar.");
-            Console.Write($"Nuevo título ({libro.Titulo}): ");
+            Console.Write($"Nuevo título ({libro.Titulo}): ");   // Se solicitan los nuevos valores. Si el usuario no ingresa nada, el valor actual se mantiene.
             string? titulo = Console.ReadLine();
             Console.Write($"Nuevo autor ({libro.Autor}): ");
             string? autor = Console.ReadLine();
@@ -89,6 +91,7 @@ namespace InventarioLibreria.Services
             Console.Write($"Nuevo stock ({libro.Stock}): ");
             string? stockStr = Console.ReadLine();
 
+            // Se actualizan los campos solo si se proporcionó un nuevo valor.
             if (!string.IsNullOrWhiteSpace(titulo)) libro.Titulo = titulo;
             if (!string.IsNullOrWhiteSpace(autor)) libro.Autor = autor;
             if (decimal.TryParse(precioStr, out decimal precio)) libro.Precio = precio;
@@ -96,7 +99,7 @@ namespace InventarioLibreria.Services
 
             Console.WriteLine("Libro actualizado.");
         }
-
+        /// Elimina un libro del inventario buscándolo por su ISBN.
         public void EliminarLibro()
         {
             Console.Write("Ingrese ISBN del libro a eliminar: ");
@@ -112,7 +115,7 @@ namespace InventarioLibreria.Services
             libros.Remove(libro);
             Console.WriteLine("Libro eliminado.");
         }
-
+        /// Registra una venta, actualiza el stock y guarda el registro de la venta.
         public void RegistrarVenta()
         {
             Console.Write("Ingrese ISBN del libro vendido: ");
@@ -133,13 +136,13 @@ namespace InventarioLibreria.Services
                 Console.WriteLine("Cantidad inválida o insuficiente stock.");
                 return;
             }
-
+            // Actualiza el stock del libro y crea un registro de venta.
             libro.Stock -= cantidad;
             Venta venta = new(libro, cantidad);
             ventas.Add(venta);
             Console.WriteLine("Venta registrada correctamente.");
         }
-
+            // Genera y muestra reportes del estado actual del inventario y las ventas.
         public void VerReportes()
         {
             Console.WriteLine("\n--- Reporte de Stock ---");
@@ -153,9 +156,11 @@ namespace InventarioLibreria.Services
             }
             else
             {
+                // Muestra la información de cada venta registrada.
                 foreach (var venta in ventas)
                     venta.MostrarVenta();
             }
         }
     }
+
 }
