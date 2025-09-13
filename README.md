@@ -143,7 +143,7 @@ class Program
 - [Guía C# POO](https://learn.microsoft.com/es-es/dotnet/csharp/programming-guide/concepts/object-oriented-programming)
 - [Ejemplo de repositorio en GitHub](https://github.com/dotnet/samples/tree/main/csharp/getting-started/console-teleprompter)
 
-Nota
+**Nota:**
 Este ejemplo guía puede ser adaptado a otros negocios o ampliado con funcionalidades extra (usuarios, categorías, persistencia en archivos, etc.).
 
 Autor:
