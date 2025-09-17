@@ -115,7 +115,7 @@ C# Avanzado - Juan Pérez | ISBN: 123456789 | Stock: 4 | Precio: $500.00
 - Más reportes y filtros avanzados.
 
 ## Estructura de Carpetas
-
+```
 InventarioLibreria/
 ├── Program.cs
 ├── Models/
@@ -124,7 +124,7 @@ InventarioLibreria/
 │   └── Venta.cs
 └── Services/
     └── InventarioService.cs
-
+```
 ## Configuracion
 ### **Programa principal (menú de acciones):**
 ```csharp
